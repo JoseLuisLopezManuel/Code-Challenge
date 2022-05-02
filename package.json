@@ -1,0 +1,27 @@
+{
+  "name": "code-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseLuisLopezManuel/Code-Challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoseLuisLopezManuel/Code-Challenge/issues"
+  },
+  "homepage": "https://github.com/JoseLuisLopezManuel/Code-Challenge#readme",
+  "devDependencies": {
+    "jest": "^28.0.3"
+  }
+}
