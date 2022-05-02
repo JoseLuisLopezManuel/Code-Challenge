@@ -1,6 +1,6 @@
 const Reader = require('./../../lib/utils/Reader')
 const Student = require('./../../lib/services/StudentService')
-
+const StudentController = require('./../../lib/controllers/StudentController')
 describe('Test de cada services',()=>{
     test('Requerimiento 1: Leer archivo',()=>{
         const leer = 'partners.json';
@@ -27,5 +27,18 @@ describe('Test de cada services',()=>{
         const studen = Reader.readJsonFile(leer);
         const estudiante = Student.Names(studen)
         expect(estudiante).toMatchObject(["Wanda"]);
+    })
+    describe('Test de cada services',()=>{
+        test('Requerimiento 1: Leer archivo',()=>{
+            const leer = Reader.readJsonFile('partners.json');
+            const AllStudent1 = StudentController.getaAllStudent(leer);
+            expect(AllStudent1).toMatchObject([{    
+                "id":"12364asd",
+                "name": "Wanda",
+                "haveCertification" : false,
+                "email":"jasoqweasd@maslqwe.com",
+                "credits":600 
+            }])
+        })
     })
 })
