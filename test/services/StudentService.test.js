@@ -28,8 +28,8 @@ describe('Test de cada services',()=>{
         const estudiante = Student.Names(studen)
         expect(estudiante).toMatchObject(["Wanda"]);
     })
-    describe('Test de cada services',()=>{
-        test('Requerimiento 1: Leer archivo',()=>{
+    describe('Test de cada controller',()=>{
+        test('Requerimiento 5: Leer archivo',()=>{
             const leer = Reader.readJsonFile('partners.json');
             const AllStudent1 = StudentController.getaAllStudent(leer);
             expect(AllStudent1).toMatchObject([{    
@@ -39,6 +39,12 @@ describe('Test de cada services',()=>{
                 "email":"jasoqweasd@maslqwe.com",
                 "credits":600 
             }])
+        })
+        test('Requerimiento 6: Obtener a todos los estudiantes',()=>{
+            const leer = 'partners.json';
+            const student = Reader.readJsonFile(leer);
+            const estudiante = StudentController.getEmailStudent(student);
+            expect(estudiante).toMatchObject([])
         })
     })
 })
