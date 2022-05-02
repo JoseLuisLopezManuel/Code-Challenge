@@ -40,11 +40,17 @@ describe('Test de cada services',()=>{
                 "credits":600 
             }])
         })
-        test('Requerimiento 6: Obtener a todos los estudiantes',()=>{
+        test('Requerimiento 6: Obtener email de estudiantes con certificacion',()=>{
             const leer = 'partners.json';
             const student = Reader.readJsonFile(leer);
             const estudiante = StudentController.getEmailStudent(student);
             expect(estudiante).toMatchObject([])
+        })
+        test('Requerimiento 7: Obtener nombres de estudiantes con creditos mayores a 500',()=>{
+            const leer = 'partners.json';
+            const student = Reader.readJsonFile(leer);
+            const estudiante = StudentController.getNameStudent(student);
+            expect(estudiante).toMatchObject(["Wanda"])
         })
     })
 })
