@@ -14,4 +14,11 @@ describe('Test de cada services',()=>{
         const estudiante = Student.Student(student);
         expect(estudiante).toMatchObject([{"id": "12364asd", "nombre": "Wanda"}])
     })
+
+    test('Requerimiento 3: Obtener los emails de los explorers que tienen una certificación',()=>{
+        const leer='partners.json';
+        const studen = Reader.readJsonFile(leer);
+        const estudiante = Student.Email(studen);
+        expect(estudiante).toMatchObject([]);
+    })
 })
